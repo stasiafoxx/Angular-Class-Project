@@ -15,14 +15,20 @@ export class TodoComponent implements OnInit {
   addTodo() {
     const lastIndex = this.todos.length - 1;
     const last = this.todos[lastIndex];
-    this.newTask.id = last.id +1;
+    this.newTask.id = last.id + 1;
     this.newTask.status = false;
     this.newTask.trash = false;
     this.todos.push(this.newTask);
     this.newTask = new Todo();
   }
 
+toggleTodo(item) {
+  item.status = !item.status;
+}
 
+moveToTrash(item) {
+  item.trash = !item.trash;
+}
   ngOnInit() {
   }
 
