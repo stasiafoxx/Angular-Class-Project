@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TODOS } from './mock-todos';
 
 @Component({
   selector: 'app-root',
