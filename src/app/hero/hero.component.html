@@ -4,9 +4,9 @@
   </div>
   <div class="row">
     <div class="col-md-3" *ngFor="let hero of heroes">
-      <div class="heroBox">
+      <div class="heroBox" [ngClass]="{ 'hero' : hero.hero, 'villian': !hero.hero}">
         <h1 class="text-center">{{ hero.name }}</h1>
-        <a routerLink="['/hero/' + hero.id '/detail']" class="btn">View</a>
+        <a [routerLink]="['/hero/' + hero.id]" class="btn btn-default">View</a>
       </div>
     </div>
   </div>
