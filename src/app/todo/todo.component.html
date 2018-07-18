@@ -9,7 +9,9 @@
   </div>
   <ul class="list-group">
     <ng-container *ngFor="let todo of todos">
-      <li class="list-group-item"  (click)="toggleTodo(todo)" [ngClass]="{'completed' : todo.status}" *ngIf="!todo.trash"> {{ todo.task }} </li>
+      <li class="list-group-item"  (click)="toggleTodo(todo)" [ngClass]="{'completed' : todo.status}" *ngIf="!todo.trash"> {{ todo.task }}
+        
+      </li>
     </ng-container>
   </ul>
 
