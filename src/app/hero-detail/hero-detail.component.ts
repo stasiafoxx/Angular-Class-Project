@@ -11,7 +11,12 @@ import { Hero } from '../hero';
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
   private temp: any;
+  newPower: string;
   constructor(private route: ActivatedRoute) { }
+  addPower() {
+    this.hero.powers.push(this.newPower);
+    this.newPower = '';
+  }
 
   ngOnInit() {
     this.temp = this.route.params.subscribe(params => {
