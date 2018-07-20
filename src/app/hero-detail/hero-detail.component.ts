@@ -18,6 +18,10 @@ export class HeroDetailComponent implements OnInit {
     this.newPower = '';
   }
 
+  trackByIndex(index: number, obj: any) {
+    return index;
+  }
+
   ngOnInit() {
     this.temp = this.route.params.subscribe(params => {
       HEROES.forEach( (el) => {
