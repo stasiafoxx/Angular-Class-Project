@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HEROES } from '../mock-heroes';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-hero-detail',
@@ -8,11 +9,18 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent implements OnInit {
-  hero: object;
+  hero: Hero;
   private temp: any;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.temp = this.route.params.subscribe(params => {
+      HEROES.forEach( (el) => {
+        if (el.id === +params ['id']) {
+          this.hero = el;
+        }
+      });
+    });
   }
 
 }
