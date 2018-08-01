@@ -7,14 +7,16 @@ import { AmiiboService } from '../services/amiibo.service';
   styleUrls: ['./amiibos.component.css']
 })
 export class AmiibosComponent implements OnInit {
+  public amiibos: Amiibo[];
 
   constructor(private amiiboService: AmiiboService) { }
   getAmiibos() {
-    this.amiiboService.getAmiibos(). subscribe();
+    this.amiiboService.getAmiibos(). subscribe((amiibos: any) => this.amiibos = amiibos.amiibo);
   }
 
   ngOnInit() {
   this.getAmiibos
+
     }
 
 }
