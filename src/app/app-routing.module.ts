@@ -5,7 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TodoComponent } from './todo/todo.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { AmiiboService } from './amiibos.amiibos.component';
+import { AmiibosComponent } from './amiibos/amiibos.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'todo', component: TodoComponent},
   { path: 'hero', component: HeroComponent},
-  { path: 'hero/:id', component: HeroDetailComponent}
+  { path: 'hero/:id', component: HeroDetailComponent},
+  { path: 'amiibos', component: AmiibosComponent}
 ];
 
 @NgModule({

@@ -9,12 +9,12 @@ import { AmiiboService } from '../services/amiibo.service';
 export class AmiibosComponent implements OnInit {
 
   constructor(private amiiboService: AmiiboService) { }
-  myFunction () {
-    this.amiiboService.myFunction();
+  getAmiibos() {
+    this.amiiboService.getAmiibos(). subscribe();
   }
 
   ngOnInit() {
-    this.myFunction();
+  this.getAmiibos
     }
 
 }
