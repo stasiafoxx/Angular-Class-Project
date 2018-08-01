@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TodoComponent } from './todo/todo.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { AmiiboService } from './amiibos.amiibos.component';
 
 
 const routes: Routes = [
